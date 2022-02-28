@@ -1,8 +1,14 @@
-@use 'sass:color';
-@use 'colors';
+@use "sass:color";
+@use "colors";
 
 @mixin for-phone-only {
   @media (max-width: 599px) {
-    @content
+    @content;
   }
-};
+}
+
+@mixin changeBgOnHover($color) {
+  &:hover {
+    background-color: $color;
+  }
+} ;

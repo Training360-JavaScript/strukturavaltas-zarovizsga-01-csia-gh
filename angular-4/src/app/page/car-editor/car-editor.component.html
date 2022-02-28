@@ -1,0 +1,82 @@
+<div class="row mt-3">
+  <div *ngIf="car$ | async as car" class="col-6 offset-3">
+    <form #carForm="ngForm" (ngSubmit)="onUpdate(carForm)">
+      <input [(ngModel)]="car.id" name="id" type="hidden" />
+
+      <div class="form-group">
+        <label for="name">Name</label
+        ><input
+          [(ngModel)]="car.model"
+          name="model"
+          type="text"
+          id="model"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="make">Make</label
+        ><input
+          [(ngModel)]="car.make"
+          name="make"
+          type="text"
+          id="make"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="year">year</label
+        ><input
+          [(ngModel)]="car.year"
+          name="year"
+          type="number"
+          id="year"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="price">price</label
+        ><input
+          [(ngModel)]="car.price"
+          name="price"
+          type="number"
+          id="price"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="stock">stock</label
+        ><input
+          [(ngModel)]="car.stock"
+          name="stock"
+          type="number"
+          id="stock"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="active">active</label
+        ><input
+          [(ngModel)]="car.active"
+          name="active"
+          type="checkbox"
+          id="active"
+          required
+        />
+      </div>
+
+      <button class="btn btn-block btn-primary">
+        <i class="fa fa-save"></i> Update
+      </button>
+    </form>
+  </div>
+</div>
